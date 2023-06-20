@@ -17,3 +17,41 @@
     color: $brown;
   }
 }
+
+// 헴버거 버튼
+.button--burger {
+  @include mobile {
+    width: rem(36px);
+    height: rem(36px);
+    border: 0;
+    padding: 0;
+    @include pos;
+    top: rem(65px);
+    right: rem(20px);
+    background: transparent;
+   
+
+    &BarTop, &BarMiddle, &BarBottom {
+      background: $white;
+      width: 100%;
+      height: 20%;
+      border-radius: rem(10px);
+      left: 0;
+    }
+
+    &BarTop {
+      @include posLeftTop;
+    }
+    &BarMiddle {
+      @include posCenterY;
+      
+    }
+    &BarBottom {
+      @include posBottomY;
+    }
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
