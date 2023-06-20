@@ -426,8 +426,7 @@ legend {
   .button--burgerBarBottom {
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
 }
 @media (min-width: 768px) {

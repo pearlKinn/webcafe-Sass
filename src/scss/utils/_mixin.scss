@@ -25,8 +25,7 @@
 @mixin posBottomY {
   @include pos;
   top: 100%;
-  left: 50%;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
 }
 
 @mixin posCenterY {
@@ -41,8 +40,6 @@
   left: 50%;
   transform: translate(-50% -50%);
 }
-
-
 
 @mixin paddingX($spacing) {
   padding-left: rem($spacing);
