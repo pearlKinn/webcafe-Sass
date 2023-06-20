@@ -1,11 +1,41 @@
 @use "./../utils/unit" as *;
 
-@mixin posCenter {
+@mixin pos {
   position: absolute;
+}
+
+@mixin posLeftTop($l: 0, $t: 0) {
+  @include pos;
+  top: $t;
+  left: $l;
+}
+
+@mixin posRightTop($r: 0, $t: 0) {
+  @include pos;
+  top: $t;
+  right: $r;
+}
+
+@mixin posCenterX {
+  @include pos;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin posCenterY {
+  @include pos;
   top: 50%;
   transform: translateY(-50%);
-
 }
+
+@mixin posCenter {
+  @include pos;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+}
+
+
 
 @mixin paddingX($spacing) {
   padding-left: rem($spacing);
