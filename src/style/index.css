@@ -378,6 +378,23 @@ legend {
   font-size: 0.875rem;
 }
 
+.button {
+  border: 0;
+  background: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-style: 0.875rem;
+  border-radius: 0.25rem;
+}
+.button--fill {
+  background: #988574;
+  color: #ffffff;
+}
+.button--outline {
+  border: 1px solid currentColor;
+  color: #988574;
+}
+
 .appHeader {
   background: yellow;
   padding: 1rem 1.5rem;
@@ -428,14 +445,12 @@ legend {
   }
 }
 
-.searchForm {
-  background: purple;
-}
 .searchForm__group {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: stretch;
+  gap: 1rem;
 }
 @media (max-width: 767px) {
   .searchForm .formInput {

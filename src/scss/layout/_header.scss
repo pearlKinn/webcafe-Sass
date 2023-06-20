@@ -8,13 +8,12 @@
   @include mobile {
     background: $dark-brown;
     color: $white;
-    
+
     @include flexbox(column);
   }
 
   @include desktop {
     position: relative;
-
   }
 }
 
@@ -38,7 +37,7 @@
 .memberOnly {
   background: green;
   @include flexbox($justify: flex-end);
-  
+
   @include mobile {
     order: -1;
   }
@@ -46,16 +45,16 @@
 
 // 검색 폼
 .searchForm {
-  background: purple;
   &__group {
     @include flexbox($justify: flex-end);
+    gap: rem(16px);
   }
 
   @include mobile {
-      .formInput {
-        flex-grow: 1;
-      }
+    .formInput {
+      flex-grow: 1;
     }
+  } 
 
   @include desktop {
     .formInput {
