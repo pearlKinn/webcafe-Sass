@@ -11,3 +11,41 @@
   padding-left: rem($spacing);
   padding-right: rem($spacing);
 }
+
+@mixin containerMax($max-width: 1024px) {
+  max-width: rem($max-width);
+  @include autoMargin;
+}
+
+@mixin padding($spacing) {
+  padding: rem($spacing);
+}
+
+@mixin paddingX($spacing) {
+  padding-left: rem($spacing);
+  padding-right: rem($spacing);
+}
+
+@mixin paddingY($spacing) {
+  padding-top: rem($spacing);
+  padding-bottom: rem($spacing);
+}
+
+@mixin margin($spacing) {
+  margin: rem($spacing);
+}
+
+@mixin marginX($spacing) {
+  margin-left: rem($spacing);
+  margin-right: rem($spacing);
+}
+
+@mixin marginY($spacing) {
+  margin-top: rem($spacing);
+  margin-bottom: rem($spacing);
+}
+
+@mixin autoMargin {
+  margin-left: auto;
+  margin-right: auto;
+}
