@@ -367,8 +367,18 @@ legend {
   margin: -1px;
 }
 
+.formInput__input {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #767676;
+  background: #ffffff;
+  font-size: 0.875rem;
+}
+
 .appHeader {
-  position: relative;
   background: yellow;
   padding: 1rem 1.5rem;
 }
@@ -380,6 +390,11 @@ legend {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
+  }
+}
+@media (min-width: 768px) {
+  .appHeader {
+    position: relative;
   }
 }
 
@@ -395,7 +410,8 @@ legend {
 @media (min-width: 768px) {
   .logo {
     position: absolute;
-    background: blue;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -422,8 +438,13 @@ legend {
   align-items: stretch;
 }
 @media (max-width: 767px) {
-  .searchForm {
-    width: 100%;
+  .searchForm .formInput {
+    flex-grow: 1;
+  }
+}
+@media (min-width: 768px) {
+  .searchForm .formInput {
+    width: 28.75rem;
   }
 }
 
