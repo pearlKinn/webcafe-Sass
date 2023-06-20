@@ -3,7 +3,7 @@
     "start": "run-p watch server",
     "sass": "sass src/scss:src/style",
     "watch": "npm run sass -- --watch",
-    "server": "live-server src",
+    "server": "live-server src --port=8090",
     "clear": "rimraf src/style",
     "build": "postcss src/style/index.css -o src/style/main.css",
     "production": "NODE_ENV=production postcss src/style/index.css -o src/style/index.css"

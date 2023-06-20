@@ -1,1 +1,34 @@
-// header.scss
+@use "./../utils/" as *;
+
+.appHeader {
+  background: yellow;
+  padding: rem(16px) rem(24px);
+
+  @include mobile {
+    background: $dark-brown;
+    color: $white;
+  }
+}
+
+// logo
+.logo {
+  width: rem(204px);
+  height: rem(60px);
+
+  &__link {
+    display: block;
+    height: 100%;
+    // 배포할 때 문제가 생길 수 있기 때문에 절대경로 사용
+    background: url(/assets/images/webcafe-logo.png) no-repeat;
+  }
+}
+
+// 멤버 서비스
+.memberOnly {
+  background: green;
+  @include flexbox($justify: flex-end);
+  &__item {
+    
+  }
+}
+
