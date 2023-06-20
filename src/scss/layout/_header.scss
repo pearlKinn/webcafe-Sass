@@ -1,12 +1,15 @@
 @use "./../utils/" as *;
 
 .appHeader {
+  position: relative;
   background: yellow;
   padding: rem(16px) rem(24px);
 
   @include mobile {
     background: $dark-brown;
     color: $white;
+    
+    @include flexbox(column);
   }
 }
 
@@ -14,6 +17,7 @@
 .logo {
   width: rem(204px);
   height: rem(60px);
+ 
 
   &__link {
     display: block;
@@ -21,14 +25,31 @@
     // 배포할 때 문제가 생길 수 있기 때문에 절대경로 사용
     background: url(/assets/images/webcafe-logo.png) no-repeat;
   }
+  @include desktop {
+    position: absolute;
+    background: blue;
+  }
 }
 
 // 멤버 서비스
 .memberOnly {
   background: green;
   @include flexbox($justify: flex-end);
-  &__item {
-    
+  
+  @include mobile {
+    order: -1;
   }
 }
 
+// 검색 폼
+.searchForm {
+  background: purple;
+
+  &__group {
+    @include flexbox($justify: flex-end);
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
