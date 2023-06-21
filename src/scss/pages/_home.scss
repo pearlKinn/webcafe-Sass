@@ -18,7 +18,6 @@
   }
 }
 
-
 @include desktop {
   // 추천 서적
   .book {
@@ -44,4 +43,45 @@
   .twitter {
     grid-area: twitter;
   }
+}
+
+// 추천 서적
+.book {
+  background: pink;
+
+  &__cover {
+    background-color: yellow;
+    width: 70%;
+    @include autoMargin;
+    text-align: center;
+  }
+  &__info {
+    @include paddingX(16px);
+    @include flexbox($direction:column, $items: center);
+    @include flexbox;
+  }
+  @at-root .ratingStar {
+    font-size: rem(18px);
+
+  }
+}
+
+// 새소식
+.news {
+  @at-root .iframeWrapper {
+    height: 100%;
+    @include ratio;
+  }
+}
+
+// 게시판
+.board {
+}
+
+// 인기사이트
+.favorite {
+}
+
+// 트위터
+.twitter {
 }

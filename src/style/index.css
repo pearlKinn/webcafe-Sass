@@ -656,5 +656,35 @@ legend {
     grid-area: twitter;
   }
 }
+.book {
+  background: pink;
+}
+.book__cover {
+  background-color: yellow;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.book__info {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.ratingStar {
+  font-size: 1.125rem;
+}
+
+.iframeWrapper {
+  height: 100%;
+  aspect-ratio: 1.7777777778;
+}
 
 /*# sourceMappingURL=index.css.map */
