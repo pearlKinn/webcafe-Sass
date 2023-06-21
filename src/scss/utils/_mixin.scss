@@ -87,9 +87,14 @@
 }
 
 // 그리드 믹스인
-@mixin gridbox($column-count: 12, $column-width: 1fr, $row-gap: 0, $column-gap: 16px) {
+@mixin gridbox(
+  $column-count: 12,
+  $column-width: 1fr,
+  $row-gap: 0,
+  $column-gap: 16px
+) {
   display: grid;
-  grid-template-columns: repeat($column-count, 1fr);
+  grid-template-columns: repeat($column-count, $column-width);
   grid-template-rows: auto;
   grid-column-gap: rem($column-gap);
   grid-row-gap: rem($row-gap);
@@ -113,7 +118,7 @@
   text-overflow: ellipsis;
 }
 
-@mixin fit($fit: cover, $posX: 50%, $posY: 50%){
+@mixin fit($fit: cover, $posX: 50%, $posY: 50%) {
   object-fit: $fit;
-  object-position: $posX,$posY;
+  object-position: $posX, $posY;
 }
