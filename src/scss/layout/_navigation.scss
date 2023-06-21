@@ -5,15 +5,20 @@
   @include padding(16px);
 
   @include mobile {
+    @at-root .is__active &__list {
+      transform: none;
+    }
+
     &__list {
-      @include padding(20px);
-      background: $accent_opacity_color;
+      background: $accent-opacity-color;
+      width: 70vw;
+      height: 100vh;
       position: fixed;
       top: 0;
       left: 0;
-      width: 70vw;
-      height: 100vh;
+      transform: translateX(-150%);
     }
+
     &__item {
       border-bottom: 1px solid $black;
     }

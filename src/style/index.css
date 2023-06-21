@@ -512,17 +512,17 @@ legend {
   padding-bottom: 1rem;
 }
 @media (max-width: 767px) {
+  .is__active .menu__list {
+    transform: none;
+  }
   .menu__list {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
     background: rgba(240, 230, 140, 0.85);
+    width: 70vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    width: 70vw;
-    height: 100vh;
+    transform: translateX(-150%);
   }
   .menu__item {
     border-bottom: 1px solid #101010;
