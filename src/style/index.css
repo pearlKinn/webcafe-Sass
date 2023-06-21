@@ -656,30 +656,23 @@ legend {
     grid-area: twitter;
   }
 }
-.book {
-  background: pink;
-}
 .book__cover {
-  background-color: yellow;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 .book__info {
-  padding-left: 1rem;
-  padding-right: 1rem;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: stretch;
+  column-gap: 0.5rem;
 }
 .ratingStar {
-  font-size: 1.125rem;
+  width: 100%;
+  font-size: 2.25rem;
+  text-align: center;
 }
 
 .iframeWrapper {

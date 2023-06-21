@@ -47,22 +47,24 @@
 
 // 추천 서적
 .book {
-  background: pink;
-
   &__cover {
-    background-color: yellow;
     width: 70%;
     @include autoMargin;
     text-align: center;
   }
-  &__info {
-    @include paddingX(16px);
-    @include flexbox($direction:column, $items: center);
-    @include flexbox;
-  }
-  @at-root .ratingStar {
-    font-size: rem(18px);
 
+  &__info {
+   
+    // 저자를 가운데로 배치
+    @include flexbox($wrap: wrap, $justify: center);
+    column-gap: rem(8px);
+  }
+
+  @at-root .ratingStar {
+    width: 100%;
+    font-size: rem(36px);
+ // ratingStar를 가운데로 배치
+    text-align: center;
   }
 }
 
@@ -76,6 +78,9 @@
 
 // 게시판
 .board {
+  &__list {
+    
+  }
 }
 
 // 인기사이트
