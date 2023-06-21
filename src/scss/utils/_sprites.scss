@@ -1,7 +1,9 @@
-@use "./color" as var;
-@use "./unit" as *;
+@use "color" as var;
+@use "unit" as *;
+@use "flexbox" as *;
 
 $colors: (
+  // 맵 타입
   "Book": var.$green,
   "News": var.$yellow,
   "Board": var.$brown,
@@ -21,11 +23,21 @@ $colors: (
   background-image: url(./../assets/images/sprite_main.png);
   background-repeat: no-repeat;
   padding-left: rem(64px);
+  font-size: rem(18px);
+  font-weight: 700;
+  @include flexbox(column, center);
 
+  [class*="enTitle"] {
+    font-size: rem(16px);
+    font-weight: 400;
+  }
+
+  // 리스트 타입
   $sprites: Book, Board, News, Favorite, Twitter;
   $x: 0;
   $y: 0;
   @each $sprite in $sprites {
+    // &은 상위 선택자 sprite를 가리킴
     &#{$sprite} {
       background-position: $x $y;
     }
