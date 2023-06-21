@@ -54,7 +54,6 @@
   }
 
   &__info {
-   
     // 저자를 가운데로 배치
     @include flexbox($wrap: wrap, $justify: center);
     column-gap: rem(8px);
@@ -63,7 +62,7 @@
   @at-root .ratingStar {
     width: 100%;
     font-size: rem(36px);
- // ratingStar를 가운데로 배치
+    // ratingStar를 가운데로 배치
     text-align: center;
   }
 }
@@ -78,15 +77,40 @@
 
 // 게시판
 .board {
-  &__list {
-    
+  position: relative;
+
+  &__item {
+    @include flexbox;
+    column-gap: rem(8px);
+    margin: 8px 0;
+  }
+
+  &__link {
+    flex-grow: 1;
+    @include textOver;
+  }
+  &__date {
+    // flex-basis: fit-content;
+    white-space: nowrap;
+  }
+
+  &__more {
+    @include posRightTop;
   }
 }
 
-// 인기사이트
-.favorite {
-}
+// // 인기사이트
+// .favorite {
+// }
 
 // 트위터
 .twitter {
+  &__userProfile {
+    @include ratio(1, 1);
+  }
+  &__userProfileImage{
+    @include respons(width, 100%);
+    border-radius: 50%;
+    @include fit(cover, 30%, 40%);
+  }
 }

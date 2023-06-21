@@ -680,4 +680,41 @@ legend {
   aspect-ratio: 1.7777777778;
 }
 
+.board {
+  position: relative;
+}
+.board__item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  column-gap: 0.5rem;
+  margin: 8px 0;
+}
+.board__link {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.board__date {
+  white-space: nowrap;
+}
+.board__more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.twitter__userProfile {
+  aspect-ratio: 1;
+}
+.twitter__userProfileImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 30%, 40%;
+}
+
 /*# sourceMappingURL=index.css.map */
