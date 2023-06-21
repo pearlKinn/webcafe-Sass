@@ -367,6 +367,48 @@ legend {
   margin: -1px;
 }
 
+.accentBook {
+  color: #abd375;
+}
+
+.accentNews {
+  color: #e8ca58;
+}
+
+.accentBoard {
+  color: #988574;
+}
+
+.accentFavorite {
+  color: #eea60a;
+}
+
+.accentTwitter {
+  color: #6aaee6;
+}
+
+.sprite {
+  min-height: 3.75rem;
+  background-image: url(./../assets/images/sprite_main.png);
+  background-repeat: no-repeat;
+  padding-left: 4rem;
+}
+.spriteBook {
+  background-position: 0 0;
+}
+.spriteBoard {
+  background-position: 0 -115px;
+}
+.spriteNews {
+  background-position: 0 -230px;
+}
+.spriteFavorite {
+  background-position: 0 -345px;
+}
+.spriteTwitter {
+  background-position: 0 -460px;
+}
+
 .formInput__input {
   appearance: none;
   display: block;
